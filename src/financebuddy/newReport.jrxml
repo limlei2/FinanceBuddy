@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="500" pageHeight="800" columnWidth="460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3196522-d6b4-4a3e-a6dc-8ac2aa2df38f">
+	<property name="ireport.zoom" value="1.464100000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="61"/>
+	<queryString>
+		<![CDATA[select * from item]]>
+	</queryString>
+	<field name="itemid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="itemname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="460" height="42" uuid="05b328cf-91ac-4d0a-8d81-68e047ed70b8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Product Sans" size="24" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Spending History]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="13" width="62" height="20" uuid="ab6454fd-734a-4801-96ae-206e0e1da64f"/>
+				<textElement>
+					<font fontName="Product Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Username:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="13" width="123" height="20" uuid="54e56f32-5855-4144-9c43-8537bbdd7e42"/>
+				<textElement>
+					<font fontName="Product Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="73" y="32" width="123" height="1" uuid="e07813d6-ade0-486c-ab43-00bef79cad54"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="236" y="13" width="93" height="20" uuid="3019b3f0-6ad0-4141-9fe2-03cf2b8d2dd3"/>
+				<textElement>
+					<font fontName="Product Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Report made on:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="329" y="31" width="110" height="1" uuid="19552217-2837-42cf-b5d4-3ed1120da944"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="329" y="13" width="100" height="20" uuid="ae05ec71-4aeb-47e3-9a17-f52494bbeee1"/>
+				<textElement>
+					<font fontName="Product Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="292" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
